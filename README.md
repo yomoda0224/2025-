@@ -1,4 +1,4 @@
-# Arduino UNO R4 WIFIを使った卒業制作
+# 2025年卒業制作3期
 
 ## 概要
 
@@ -23,24 +23,6 @@ Arduino UNO R4 Wifiを用いた、重さの検知と指紋認証でロック解�
 |レベルコンバータ|1個|arduinoとLEDを接続するため|
 |指紋認証モジュール ※3|1個|指紋認証|
 |サーボ|1個|扉の開閉制御|
-
-**※1 ロードセルについて**  
-調べたところ、ロードセルには色々種類があった
-
-|種類|主な特徴|適した荷重の方向|主な用途例|
-|-|-|-|-|
-|S字型|引張・圧縮の両用が可能で汎用性が高い|引張・圧縮|クレーンスケール、引張試験機|
-|ビーム型|高精度で一般的なスケールに使用される|圧縮|台はかり、ホッパースケール|
-|薄型|本体が低く、限られたスペースに設置可能|主に圧縮|デジタル体重計、組み込み機器|
-
-今回はhogeなのでfuga型を選んだ。
-
-**※2 LEDタッチパネルについて**  
-視認性向上と、タッチパネルにすることで操作用のパーツを減らすため
-
-**※3 指紋認証モジュールについて**  
-指紋認証モジュールも調べたところ3種類ほど見つかった
-コスパや見た目、配送期間を考えた結果ZW101にした
 
 ## 簡単なフローチャート
 
@@ -69,18 +51,40 @@ graph TD;
 
 ### 標準ライブラリ
 
+Arduino.h
+Servo.h
+
 ### 追加ライブラリ
+
+指紋認証モジュール
+Adafruit_Fingerprint.h
+
+画面表示
+SPI.h
+Adafruit_GFX.h
+Adafruit_ILI9341.h
+
+タッチパネル
+XPT2046_Touchscreen.h
+SPI.h
 
 ## 参考サイト
 
 - ロードセル
-  - Arduinoを使った重さの計測 <https://deviceplus.jp/arduino/arduino-dezitaru-keisoku-2/>
+  - webサイト <https://deviceplus.jp/arduino/arduino-dezitaru-keisoku-2/>
   - 解説動画 <https://youtu.be/1BfKZ6SDnD0?si=p0DVoaR5B4i8J-f0>
-  - 重さの設定の解説 <https://youtu.be/sxzoAGf1kOo?si=oG0q9NBSkf5GrbU3>
+  - キャリブレーションの解説 <https://youtu.be/sxzoAGf1kOo?si=oG0q9NBSkf5GrbU3>
+
 - 貨幣の重さ
   - 財務省 <https://www.mof.go.jp/policy/currency/coin/general_coin/list.htm>
+
+- LCDタッチパネル
+  - 動画 <https://www.youtube.com/watch?v=UAqyy7OqpZY>
+  - webサイト <http://jh7ubc.web.fc2.com/Arduino_R4/Arduino_UNO_R4_TFT.html>
+
 - 指紋認証モジュール
-  - 解説動画 <https://youtu.be/X6WnkEh0kHU?si=h_zM5rgrfo6YTD_W>
-  - 光学式と静電容量式の解説 <https://youtu.be/SPg0zJzs7dw?si=a0-kj1_iehp_nMjv>
+  - 解説動画 <https://www.youtube.com/shorts/sTgih5Lm5V8>
+  - webサイト <https://www.adafruit.com/product/4750>
+
 - サーボ
   - Arduino基本プロジェクト <https://docs.sunfounder.com/projects/elite-explorer-kit/ja/latest/basic_projects/27_basic_servo.html>
