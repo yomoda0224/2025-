@@ -36,6 +36,8 @@ LCDタッチパネルへの重量と金額の表示
 
 ### 回路図
 
+![alt text](picture/schematic.png)
+
 ### 簡単なフローチャート
 
 ``` mermaid
