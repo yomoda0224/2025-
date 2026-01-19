@@ -4,6 +4,8 @@
 
 Arduino UNO R4 Wifiを用いた、重さの検知と指紋認証でロック解除できる貯金箱
 
+![alt text](picture/entirety.jpg)
+
 ## 主な機能
 
 ロードセルを使用した、貨幣の重さを検知  
@@ -28,6 +30,12 @@ LCDタッチパネルへの重量と金額の表示
 
 ※1：Arduino UNO R4 Wifiは5V、LCDタッチパネルと指紋認証モジュールは3.3Vで動作するため、レベルコンバーターを介し電圧を下げてからピンに接続する必要がある
 
+### ブレッドボード図
+
+![alt text](picture/breadboard.png)
+
+### 回路図
+
 ### 簡単なフローチャート
 
 ``` mermaid
@@ -41,10 +49,19 @@ graph TD;
     I --通常時に戻る--> A
 ```
 
-### ブレッドボード図
-<img width="2807" height="1335" alt="卒業制作ブレッドボード図" src="https://github.com/user-attachments/assets/56820be4-a926-48c5-9058-a411a800dcf7" />
+### 画面遷移
 
-### 回路図
+通常時
+![alt text](picture/normal.jpg)
+
+指紋認証待機
+![alt text](picture/confirming.jpg)
+
+認証成功
+![alt text](picture/success.jpg)
+
+認証失敗
+![alt text](picture/Failure.jpg)
 
 ### ソフトウェア
 
